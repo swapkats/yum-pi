@@ -21,7 +21,7 @@ Frontmatter: `description: "Branch, commit, and open a PR (never push to main)"`
 
 ## prompts/sync-dotfiles.md
 
-Frontmatter: `description: "Sync dirty pi config in ~/dotfiles back to the repo via branch + PR"`. Body: check `git status` in `~/dotfiles`; if dirty, create a feature branch, write conventional commit(s), push with `git push -u origin HEAD`, create the PR with `gh pr create`, and report the PR URL. Commit pi's own normalized output (e.g. pretty-printed `settings.json`) as-is rather than reverting it. Never merge or push to master. If the repo is clean, say so and do nothing else.
+Frontmatter: `description: "Sync dirty pi config from the dotfiles clone back to the repo via branch + PR"`. Body: resolve the clone location without assuming a path (`readlink ~/.pi/agent/settings.json`; the repo root is the parent of its `pi/` directory); check `git status` there; if dirty, create a feature branch, write conventional commit(s), push with `git push -u origin HEAD`, create the PR with `gh pr create`, and report the PR URL. Commit pi's own normalized output (e.g. pretty-printed `settings.json`) as-is rather than reverting it. Never merge or push to master. If the repo is clean, say so and do nothing else.
 
 ## themes/c22-dark.json
 

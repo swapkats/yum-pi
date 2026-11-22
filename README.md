@@ -7,7 +7,7 @@ A minimal batteries pack for the [Pi coding agent](https://pi.dev). Not a fork o
 - **guardrails** extension — deterministic, headless-safe blocks:
   - `git push` to `main`/`master` is blocked. Feature branch + PR, always.
   - file writes outside the working directory are blocked (except `~/.pi/agent` and the system temp dir).
-- **prompts** — `/pr` (branch, commit, open a PR) and `/sync-dotfiles` (sync dirty pi config from `~/dotfiles` back to the repo via branch + PR).
+- **prompts** — `/pr` (branch, commit, open a PR) and `/sync-dotfiles` (sync dirty pi config from the dotfiles clone back to the repo via branch + PR; resolves the clone location from the `~/.pi/agent` symlinks, no hardcoded paths).
 - **c22-dark** theme — deep black `#0a0a0f`, electric blue and violet accents.
 
 ## Install
