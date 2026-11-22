@@ -1,0 +1,11 @@
+{
+  "name": "yum-pi",
+  "version": "0.1.0",
+  "description": "A minimal batteries pack for the Pi coding agent: deterministic guardrails, workflow prompt templates, and a dark theme. Installs into the standard pi config; no fork, no new binary.",
+  "keywords": ["pi-package"],
+  "pi": {
+    "extensions": ["./extensions/*.ts"],
+    "prompts": ["./prompts/*.md"],
+    "themes": ["./themes/*.json"]
+  }
+}
